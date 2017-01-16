@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
   
   def new
     @review = Review.new
-    respond_with(@review)
+    #respond_with(@review)
   end
 
   def edit
@@ -20,7 +20,7 @@ class ReviewsController < ApplicationController
     #@review.save
     #respond_with(@review)
     if @review.save
-      redirect_to @review
+      redirect_to @movie
     else
       render 'new'
     end
@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
 
   def update
     @review.update(review_params)
-    respond_with(@review)
+    #respond_with(@review)
   end
 
   def destroy
